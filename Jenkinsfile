@@ -31,7 +31,14 @@ pipeline {
           pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
         }
       }
-    }
+    }  
+
+    stage('SonarQube- SAST') {
+      steps {
+        sh " mvn sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.host.url=http://sylonlearning.ml:9000  -Dsonar.login=abda0a1d33e54dc2e8b93bdeb246ceda37583700"
+      }
+    }  
+    
 
     stage('Docker Build and Push') {
       steps {

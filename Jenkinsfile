@@ -58,7 +58,7 @@ pipeline {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
           sh 'printenv'
-          sh 'docker build -t sylon/numeric-app:""$GIT_COMMIT"" .'
+          sh 'sudo docker build -t sylon/numeric-app:""$GIT_COMMIT"" .'
           sh 'docker push sylon/numeric-app:""$GIT_COMMIT""'
         }
       }

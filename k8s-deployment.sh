@@ -3,7 +3,7 @@
 #k8s-deployment.sh
 
 #This scripts checks for the existence of  a deployment then updates the image. However these presents an issue as changes to the yaml file is not reflected. So it will be temporalily disabled
-# sed -i "s#replace#${imageName}#g" k8s_deployment_service.yaml
+sed -i "s#replace#${imageName}#g" k8s_deployment_service.yaml
 # kubectl -n default get deployment ${deploymentName} > /dev/null
 
 # if [[ $? -ne 0 ]]; then

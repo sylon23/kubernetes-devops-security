@@ -6,7 +6,7 @@ pipeline {
     containerName = "devsecops-container"
     serviceName = "devsecops-svc"
     imageName = "sylon/numeric-app:${GIT_COMMIT}"
-    applicationURL = "http://devsecops-demo.eastus.cloudapp.azure.com/"
+    applicationURL = "http://sylonlearning.ml"
     applicationURI = "/increment/99"
   }
 
@@ -138,7 +138,7 @@ pipeline {
       }
     }
 
-  }
+  
 
   }
   post {

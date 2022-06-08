@@ -1,16 +1,16 @@
 @Library('slack') _
 
 pipeline {
-//   agent any
+  agent any
 
-//   environment {
-//     deploymentName = "devsecops"
-//     containerName = "devsecops-container"
-//     serviceName = "devsecops-svc"
-//     imageName = "sylon/numeric-app:${GIT_COMMIT}"
-//     applicationURL = "http://sylonlearning.ml"
-//     applicationURI = "/increment/99"
-//   }
+  environment {
+    deploymentName = "devsecops"
+    containerName = "devsecops-container"
+    serviceName = "devsecops-svc"
+    imageName = "sylon/numeric-app:${GIT_COMMIT}"
+    applicationURL = "http://sylonlearning.ml"
+    applicationURI = "/increment/99"
+  }
 
    stages {
 

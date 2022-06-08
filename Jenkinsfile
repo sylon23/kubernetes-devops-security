@@ -12,7 +12,7 @@ pipeline {
 //     applicationURI = "/increment/99"
 //   }
 
-//   stages {
+   stages {
 
 //     stage('Build Artifact - Maven') {
 //       steps {
@@ -141,15 +141,13 @@ pipeline {
 //     }
 
 
-//   stage('OWASP ZAP - DAST') {
-//       steps {
-//         withKubeConfig([credentialsId: 'kubeconfig']) {
-//           sh 'bash zap.sh'
-//         }
-//       }
-//     }
-
-//   }
+  // stage('OWASP ZAP - DAST') {
+  //     steps {
+  //       withKubeConfig([credentialsId: 'kubeconfig']) {
+  //         sh 'bash zap.sh'
+  //       }
+  //     }
+  //   }
 
   stage('Testing slack') {
       steps {
@@ -158,6 +156,11 @@ pipeline {
         }
       }
     }
+      
+
+  }
+
+ 
 
 
   post {

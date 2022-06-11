@@ -157,6 +157,27 @@ pipeline {
   }
 }
 
+//commented out because local kube-bench installation needed for it to run is returning errors and I have other priorities
+  // stage('K8S CIS Benchmark') {
+  //     steps {
+  //       script {
+
+  //         parallel(
+  //           "Master": {
+  //             sh "bash cis-master.sh"
+  //           },
+  //           "Etcd": {
+  //             sh "bash cis-etcd.sh"
+  //           },
+  //           "Kubelet": {
+  //             sh "bash cis-kubelet.sh"
+  //           }
+  //         )
+
+  //       }
+  //     }
+  //   }
+
   // stage('Testing slack') {
   //     steps {
   //         sh 'exit 0'
